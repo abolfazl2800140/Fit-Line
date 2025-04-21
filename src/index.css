@@ -1,0 +1,6 @@
+@import url("assets/Fonts/Fonts.css");
+@import "tailwindcss";
+
+html * {
+  font-family: "IRANSansXFaNum" !important;
+}
