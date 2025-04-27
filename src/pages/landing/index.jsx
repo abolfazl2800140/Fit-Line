@@ -24,7 +24,7 @@ const Landing = () => {
             ورود
           </NavLink>
           <NavLink
-            to={"/signUp"}
+            to={"/signup"}
             className={({ isActive }) =>
               isActive ? "text-orange-300 text-lg" : "text-white text-lg"
             }
@@ -41,14 +41,14 @@ const Landing = () => {
           <h1 className="text-4xl flex justify-center items-center p-2 text-white leading-12">
             بهترین مربیت رو از پلتفرم آنلاین فیت لاین پیدا کن
           </h1>
-          <div className="text-white text-xl bg-[#f48b37] w-36 h-16 flex justify-center items-center rounded-2xl ">
+          <div className="text-white text-xl bg-[#f48b37] w-36 h-16 flex justify-center items-center rounded-2xl">
             جستجوی مربی
           </div>
-          {/* <div className="absolute bottom-0 right-10 bg-red-500 w-32 h-48 flex rotate-45">
+          <div className="absolute bottom-0 right-10 w-32 h-48 flex rotate-45">
             <div className="h-14 w-5 bg-[#0097a0] rounded-2xl self-center"></div>
             <div className="w-10 h-4 bg-[#06bdc7]  self-center"></div>
             <div className="h-14 w-5 bg-[#0097a0] rounded-2xl self-center"></div>
-          </div> */}
+          </div>
         </div>
       </div>
     </div>
