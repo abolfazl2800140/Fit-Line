@@ -1,4 +1,4 @@
-import { Backdrop, Modal } from "@mui/material";
+import { Backdrop, Modal, Rating } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import React, { useState } from "react";
@@ -41,7 +41,24 @@ const TrainerProfile = () => {
           onClick={(e) => handleImage(image)}
         />
       </div>
-      <div className="flex-9/12"></div>
+      <div className="flex-9/12 flex flex-col">
+        <div className="flex-2/12 flex justify-center items-center gap-2">
+          <span className="text-xl">{userName} - </span>
+          <span className="text-[#2661bc] text-xl">مربی</span>
+        </div>
+        <div className="flex-2/12 flex flex-col gap-2">
+          <div className="flex-2/3 flex justify-between items-center">
+            <span className="text-[#2661bc] text-lg">
+              مربی درجه 1 فدراسیون بدنسازی
+            </span>
+            <span className="flex-1/3 flex justify-end  items-center">
+              <Rating name="size-small" defaultValue={2} size="medium" />
+            </span>
+          </div>
+          <div>dfbdfb</div>
+        </div>
+        <div className="flex-10/12"></div>
+      </div>
       <Modal
         open={open}
         onClose={handleClose}
