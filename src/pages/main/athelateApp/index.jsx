@@ -5,12 +5,13 @@ import {
   IconButton,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Link, Outlet, useNavigate } from "react-router-dom";
+import { Link, Outlet, useLocation, useNavigate } from "react-router-dom";
 import RestoreIcon from "@mui/icons-material/Restore";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import SettingsIcon from "@mui/icons-material/Settings";
 import SearchIcon from "@mui/icons-material/Search";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
 
 const AthelateApp = () => {
   const [value, setValue] = useState(0);
@@ -36,16 +37,39 @@ const AthelateApp = () => {
     },
   ];
 
+  const location = useLocation();
   const navigate = useNavigate();
+
+  const pattern = /\/coachs\/\d+/;
+
+  const clickHandler = () => {
+    if (pattern.test(location.pathname)) {
+      setTimeout(() => {
+        navigate(-1);
+      }, 300);
+    } else {
+      setTimeout(() => {
+        navigate("/athelate-profile");
+      }, 300);
+    }
+  };
 
   return (
     <div className="w-screen h-screen flex flex-col">
       <header className="flex-1/12 border-b-1 border-gray-300 flex justify-between items-center px-2 bg-[#0097a0]">
         <div className="flex flex-1 items-center justify-start h-full gap-3">
-          <IconButton className="align-middle">
-            <Link to={"/athelate-profile"}>
+          <IconButton
+            className="align-middle"
+            sx={{ color: "white" }}
+            onClick={() => clickHandler()}
+          >
+            {pattern.test(location.pathname) ? (
+              <KeyboardBackspaceIcon
+                sx={{ rotate: "180deg", fontSize: "35px", color: "while" }}
+              />
+            ) : (
               <PermIdentityIcon fontSize="large" sx={{ color: "white" }} />
-            </Link>
+            )}
           </IconButton>
         </div>
         <div className="flex-1 flex justify-end ">

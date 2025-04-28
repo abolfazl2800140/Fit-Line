@@ -24,7 +24,8 @@
       "history": "4",
       "isTrainer": true,
       "image": "/image7.jpg",
-      "student": 4
+      "student": 4,
+      "rating": 4
     },
     {
       "id": "3",
@@ -34,7 +35,8 @@
       "history": "6",
       "isTrainer": true,
       "image": "/image1.jpg",
-      "student": 4
+      "student": 4,
+      "rating": 4
     },
     {
       "id": "7",
@@ -44,7 +46,8 @@
       "history": "12",
       "isTrainer": true,
       "image": "/image5.jpg",
-      "student": 4
+      "student": 4,
+      "rating": 4
     },
     {
       "id": "4",
@@ -54,7 +57,8 @@
       "history": "14",
       "isTrainer": true,
       "image": "/image2.jpg",
-      "student": 4
+      "student": 4,
+      "rating": 4
     },
     {
       "id": "5",
@@ -64,7 +68,8 @@
       "history": "8",
       "isTrainer": true,
       "image": "/image3.jpg",
-      "student": 4
+      "student": 4,
+      "rating": 4
     },
     {
       "id": "6",
@@ -74,7 +79,8 @@
       "history": "12",
       "isTrainer": true,
       "image": "/image4.jpg",
-      "student": 4
+      "student": 4,
+      "rating": 4
     },
     {
       "id": "8",
@@ -84,7 +90,8 @@
       "history": "5",
       "isTrainer": true,
       "image": "/image6.jpg",
-      "student": 4
+      "student": 4,
+      "rating": 4
     }
   ]
 }
