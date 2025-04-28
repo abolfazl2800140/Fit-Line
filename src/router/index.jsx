@@ -9,6 +9,9 @@ import AthelateProfile from "../pages/main/athelateApp/profile";
 import CoachApp from "../pages/main/coachApp";
 import CoachProfile from "../pages/main/coachApp/profile";
 import SearchCoach from "../pages/main/athelateApp/searchCoach";
+import Education from "../pages/main/education";
+import Setting from "../pages/main/setting";
+import TrainerProfile from "../pages/main/athelateApp/searchCoach/trainerProfile";
 
 export const router = createBrowserRouter([
   { path: "/", element: <AuthRedirect /> },
@@ -19,8 +22,15 @@ export const router = createBrowserRouter([
     path: "/athelate-app",
     element: <AthelateApp />,
     children: [
-      { index: true, element: <Navigate to="search-coach" replace /> },
-      { path: "search-coach", element: <SearchCoach />, index: true },
+      { index: true, element: <Navigate to="coachs" replace /> },
+      {
+        path: "coachs",
+        element: <SearchCoach />,
+        // index: true,
+      },
+      { path: "coachs/:id", element: <TrainerProfile /> },
+      { path: "education", element: <Education /> },
+      { path: "setting", element: <Setting /> },
     ],
   },
   { path: "/athelate-profile", element: <AthelateProfile /> },

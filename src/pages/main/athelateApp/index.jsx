@@ -5,7 +5,7 @@ import {
   IconButton,
 } from "@mui/material";
 import React, { useState } from "react";
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import RestoreIcon from "@mui/icons-material/Restore";
 import PermIdentityIcon from "@mui/icons-material/PermIdentity";
 import SettingsIcon from "@mui/icons-material/Settings";
@@ -14,6 +14,29 @@ import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 
 const AthelateApp = () => {
   const [value, setValue] = useState(0);
+
+  const navigationList = [
+    {
+      label: "مربی ها ",
+      icon: <SearchIcon fontSize="medium" />,
+      path: "coachs",
+      value: 1,
+    },
+    {
+      label: "آموزش",
+      icon: <FitnessCenterIcon fontSize="medium" />,
+      path: "education",
+      value: 2,
+    },
+    {
+      label: "تنظیمات",
+      icon: <SettingsIcon fontSize="medium" />,
+      path: "setting",
+      value: 3,
+    },
+  ];
+
+  const navigate = useNavigate();
 
   return (
     <div className="w-screen h-screen flex flex-col">
@@ -47,18 +70,16 @@ const AthelateApp = () => {
             setValue(newValue);
           }}
         >
-          <BottomNavigationAction
-            label="مربی ها"
-            icon={<SearchIcon fontSize="medium" />}
-          />
-          <BottomNavigationAction
-            label="آموزش"
-            icon={<FitnessCenterIcon fontSize="medium" />}
-          />
-          <BottomNavigationAction
-            label="تنظیمات"
-            icon={<SettingsIcon fontSize="medium" />}
-          />
+          {navigationList?.map((item) => {
+            return (
+              <BottomNavigationAction
+                onClick={() => navigate(item.path)}
+                key={item.value}
+                label={item.label}
+                icon={item.icon}
+              />
+            );
+          })}
         </BottomNavigation>
       </nav>
     </div>
