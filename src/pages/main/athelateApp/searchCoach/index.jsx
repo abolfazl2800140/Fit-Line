@@ -86,7 +86,7 @@ const SearchCoach = () => {
               animation="wave"
               variant="rounded"
               width={"100%"}
-              height={60}
+              height={80}
             />
             <Skeleton
               animation="wave"

@@ -4,6 +4,9 @@ module.exports = {
       fontFamily: {
         Rollete: ["Rollete"],
       },
+      width: {
+        "custom-calc": "calc(100dvw - 60px)",
+      },
     },
   },
 };

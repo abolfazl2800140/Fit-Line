@@ -12,6 +12,12 @@ import SearchCoach from "../pages/main/athelateApp/searchCoach";
 import Education from "../pages/main/education";
 import Setting from "../pages/main/setting";
 import TrainerProfile from "../pages/main/athelateApp/searchCoach/trainerProfile";
+import Chat from "../pages/main/chat";
+import ExpriencePage from "../pages/main/expriencePage";
+import AddExprince from "../pages/main/addExprience";
+import Harekat from "../pages/main/education/harekat";
+import Maqale from "../pages/main/education/maqale";
+import Kalery from "../pages/main/education/kalery";
 
 export const router = createBrowserRouter([
   { path: "/", element: <AuthRedirect /> },
@@ -29,10 +35,19 @@ export const router = createBrowserRouter([
         // index: true,
       },
       { path: "coachs/:id", element: <TrainerProfile /> },
-      { path: "education", element: <Education /> },
+      {
+        path: "education",
+        element: <Education />,
+      },
+      { path: "education/harekat", element: <Harekat /> },
+      { path: "education/maqale", element: <Maqale /> },
+      { path: "education/kalery", element: <Kalery /> },
+      { path: "exprince", element: <ExpriencePage /> },
+      { path: "exprince/new", element: <AddExprince /> },
       { path: "setting", element: <Setting /> },
     ],
   },
+  { path: "chat", element: <Chat /> },
   { path: "/athelate-profile", element: <AthelateProfile /> },
   { path: "/coach-app", element: <CoachApp /> },
   { path: "/coach-profile", element: <CoachProfile /> },

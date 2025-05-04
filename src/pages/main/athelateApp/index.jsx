@@ -12,6 +12,7 @@ import SettingsIcon from "@mui/icons-material/Settings";
 import SearchIcon from "@mui/icons-material/Search";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
 import KeyboardBackspaceIcon from "@mui/icons-material/KeyboardBackspace";
+import EventNoteIcon from "@mui/icons-material/EventNote";
 
 const AthelateApp = () => {
   const [value, setValue] = useState(0);
@@ -28,6 +29,12 @@ const AthelateApp = () => {
       icon: <FitnessCenterIcon fontSize="medium" />,
       path: "education",
       value: 2,
+    },
+    {
+      label: "تجربیات",
+      icon: <EventNoteIcon fontSize="medium" />,
+      path: "exprince",
+      value: 4,
     },
     {
       label: "تنظیمات",
@@ -76,7 +83,7 @@ const AthelateApp = () => {
           <h1 className="text-3xl text-white">fitLine</h1>
         </div>
       </header>
-      <main className="flex-10/12">
+      <main className=" min-h-0 flex-10/12">
         <Outlet />
       </main>
       <nav className="bg-red-400 flex-1/12 flex">
